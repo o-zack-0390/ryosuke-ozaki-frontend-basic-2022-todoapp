@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXTS from "../../../variables/texts";
+import "./style.css";
 
 export const Title = () => {
   return (
-    <TitleContainer>
+    <TitleContainer className="title-container">
       <TitleText>
         SIMPLE TODO APP
       </TitleText>
@@ -14,13 +15,7 @@ export const Title = () => {
 }
 
 // flex コンテナ
-const TitleContainer = styled.div`
-  width: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const TitleContainer = styled.div``;
 
 // flex アイテム
 const TitleText = styled.div`
