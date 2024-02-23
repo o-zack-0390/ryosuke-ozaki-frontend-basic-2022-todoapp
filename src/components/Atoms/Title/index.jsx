@@ -4,14 +4,30 @@ import COLOR from "../../../variables/color";
 import TEXTS from "../../../variables/texts";
 
 export const Title = () => {
-  return <StyledText>SIMPLE TODO APP</StyledText>;
+  return (
+    <TitleContainer>
+      <TitleText>
+        SIMPLE TODO APP
+      </TitleText>
+    </TitleContainer>
+  );
 }
 
-const StyledText = styled.div`
-    color: ${COLOR.WHITE};
-    ${TEXTS.L}
+// flex コンテナ
+const TitleContainer = styled.div`
+  width: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-    @media (max-width: 750px) {
-        ${TEXTS.M}
-    }
+// flex アイテム
+const TitleText = styled.div`
+  color: ${COLOR.WHITE};
+  ${TEXTS.L}
+
+  @media (max-width: 750px) {
+      ${TEXTS.M}
+  }
 `;
