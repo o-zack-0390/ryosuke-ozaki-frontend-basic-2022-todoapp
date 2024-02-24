@@ -3,9 +3,9 @@
   height: 20px;
   border: 0px;
   position: relative;
-  
+
   /*
-    button の初期値に border が設定されていることが原因で上に重ねても若干ズレる。
+    button の初期値に border が設定されていることが原因で画像を上に重ねても若干ズレる。
     border を 0px にして親要素と子要素のサイズを同じにする必要がある。
   */
 }
