@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
   /*
     button タグには初期値で border が設定されているので 0px に変更。
     padding も初期値で設定されているので指定値に上書きする。
