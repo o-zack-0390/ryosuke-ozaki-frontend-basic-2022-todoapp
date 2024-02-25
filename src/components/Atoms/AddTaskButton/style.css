@@ -6,7 +6,8 @@
   align-items: center;
   gap: 10px;
   /*
-    button タグには初期値で padding と border が設定されているので 0px に変更
+    button タグには初期値で border が設定されているので 0px に変更。
+    padding も初期値で設定されているので指定値に上書きする。
   */
 }
 
