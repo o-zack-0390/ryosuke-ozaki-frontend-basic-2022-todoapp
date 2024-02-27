@@ -73,7 +73,7 @@ export const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
 
   return (
-    <TodoCardContainer>
+    <TodoCardContainer className="todocard-container">
       <AddTaskButton 
         onClick={onAddTaskButtonClick}
       />
@@ -98,6 +98,8 @@ export const TodoCard = () => {
   );
 }
 
-const TodoCardContainer = styled.div``;
+const TodoCardContainer = styled.div`
+  background-color: ${COLOR.LIGHT_BLACK};
+`;
 
 const TaskContainer = styled.div``;
