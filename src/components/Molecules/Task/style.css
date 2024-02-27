@@ -1,0 +1,21 @@
+.task-container{
+  padding: 2px 6px;
+  display: flex;
+  gap: 10px;
+}
+
+.print-content{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.print-taskname{
+  margin: 0px;
+  flex: 1; 
+  
+  /* 
+    margin 0px: -> p タグには初期値で margin が設定されているので上書き
+    flex: 1     -> 編集ボタンとの余白を埋めて間隔を保持するように変更 
+  */
+}
