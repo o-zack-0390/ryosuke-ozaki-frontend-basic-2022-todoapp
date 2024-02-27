@@ -78,24 +78,26 @@ export const TodoCard = () => {
         onClick={onAddTaskButtonClick}
       />
       {taskList.map((task, index) => ( // taskList の各要素に対して Task コンポーネントを適用
-        <Task // Task コンポーネントに渡す引数を設定
-          key={index}                                                    // 各要素に一意な key を追加
-          onTaskNameChange = {(value) => onTaskNameChange(value, index)} // タスク編集時の処理を関数にして設定
-          onTaskComplete = {() => onTaskComplete(index)}                 // タスク完了時の処理を関数にして設定
-          taskName = {task.name}                                         // タスク名を設定
-          defaultValue = {task.initializing}                             // 編集状態を設定
-          
-          /*
-            onTaskComplete の引数について
+        <TaskContainer key={index} className="todocard-task">
+          <Task
+            onTaskNameChange = {(value) => onTaskNameChange(value, index)} // タスク編集時の処理を関数にして設定
+            onTaskComplete = {() => onTaskComplete(index)}                 // タスク完了時の処理を関数にして設定
+            taskName = {task.name}                                         // タスク名を設定
+            defaultValue = {task.initializing}                             // 編集状態を設定
+          />
+        </TaskContainer>
+        /*
+          onTaskComplete の引数について
 
-            {onTaskComplete(index)} にするとタスク完了を待たずに即実行されるため NG
-            {() => onTaskComplete(index)} にするとタスク完了時に実行される関数として機能する
-            onTaskNameChange も同様。
-          */
-        />
+          {onTaskComplete(index)} にするとタスク完了を待たずに即実行されるため NG
+          {() => onTaskComplete(index)} にするとタスク完了時に実行される関数として機能する
+          onTaskNameChange も同様。
+        */
       ))}
     </TodoCardContainer>
   );
 }
 
 const TodoCardContainer = styled.div``;
+
+const TaskContainer = styled.div``;
