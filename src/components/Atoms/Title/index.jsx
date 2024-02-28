@@ -8,7 +8,7 @@ import "./style.css";
 
 export const Title = () => {
   return (
-    <TitleContainer className="title-container">
+    <TitleContainer>
       <TitleText>
         SIMPLE TODO APP
       </TitleText>
@@ -16,10 +16,8 @@ export const Title = () => {
   );
 }
 
-// flex コンテナ
 const TitleContainer = styled.div``;
 
-// flex アイテム
 const TitleText = styled.div`
   ${TEXTS.L}
   color: ${COLOR.WHITE};
