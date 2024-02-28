@@ -4,7 +4,6 @@ import COLOR from "../../../variables/color";
 import TEXTS from "../../../variables/texts";
 import BREAKPOINT from "../../../variables/breakpoint";
 import FONTFAMILY from "../../../variables/font_family";
-import "./style.css";
 
 export const Title = () => {
   return (
