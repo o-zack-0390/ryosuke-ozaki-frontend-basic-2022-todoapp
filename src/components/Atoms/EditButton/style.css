@@ -25,9 +25,4 @@
 .edit-button-image{
   width: 20px;
   height: 20px;
-
-  /*
-    right: 0px  -> 親要素の右側から 0px の位置に配置を合わせる
-    bottom: 0px -> 親要素の下側から 0px の位置に配置を合わせる
-  */
 }
