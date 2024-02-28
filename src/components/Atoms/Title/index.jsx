@@ -21,6 +21,10 @@ const TitleText = styled.div`
 
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
       ${TEXTS.M}
-      font-family: ${FONTFAMILY.NOTO_SANS};
   }
 `;
+/*
+  モバイル対応時のフォントについて
+  Figma の指定では Noto Sans JP だが、 サンプルストーリー上では Robot になっている。
+  今回はサンプルストーリー上のレイアウトに合わせて Robot を指定しておく。
+*/
