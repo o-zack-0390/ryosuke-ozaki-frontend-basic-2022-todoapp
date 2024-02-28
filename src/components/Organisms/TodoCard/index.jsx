@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import TEXTS from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton";
 import { Task } from "../../Molecules/Task/index";
