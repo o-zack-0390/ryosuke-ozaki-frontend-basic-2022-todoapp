@@ -21,9 +21,10 @@ const TitleContainer = styled.div``;
 const TitleText = styled.div`
   ${TEXTS.L}
   color: ${COLOR.WHITE};
-  font-family: ${FONTFAMILY.NOTO_SANS};
+  font-family: ${FONTFAMILY.ROBOTO};
 
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
       ${TEXTS.M}
+      font-family: ${FONTFAMILY.NOTO_SANS};
   }
 `;
