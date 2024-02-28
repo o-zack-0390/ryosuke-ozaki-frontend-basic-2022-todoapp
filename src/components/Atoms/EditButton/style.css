@@ -2,15 +2,18 @@
   width: 20px;
   height: 20px;
   border: 0px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   /*
-    button の初期値に border が設定されていることが原因で画像を上に重ねても若干ズレる。
-    border を 0px にして親要素と子要素のサイズを同じにする必要がある。
+    relative を指定して edit-button-image セレクタを継承する要素を重ね合わせる方法で表示していたが、
+    flex アイテムにして要素を中心に配置した方が楽だったため flex を用いるように変更。
   */
 }
 
 .edit-button:hover{
+  cursor: pointer;
   border-radius: 20px;
 
   /*
@@ -22,9 +25,6 @@
 .edit-button-image{
   width: 20px;
   height: 20px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
 
   /*
     right: 0px  -> 親要素の右側から 0px の位置に配置を合わせる
