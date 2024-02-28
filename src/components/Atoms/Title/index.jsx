@@ -8,15 +8,11 @@ import "./style.css";
 
 export const Title = () => {
   return (
-    <TitleContainer>
-      <TitleText>
-        SIMPLE TODO APP
-      </TitleText>
-    </TitleContainer>
+    <TitleText>
+      SIMPLE TODO APP
+    </TitleText>
   );
 }
-
-const TitleContainer = styled.div``;
 
 const TitleText = styled.div`
   ${TEXTS.L}
