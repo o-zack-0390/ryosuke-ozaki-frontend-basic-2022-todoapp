@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import pencil from "../../../assets/svg/pencil.svg";
 import COLOR from "../../../variables/color";
-import "./style.css";
 
 export const EditButton = ({onClick}) => {
   return (
@@ -13,13 +12,34 @@ export const EditButton = ({onClick}) => {
 }
 
 const Button = styled.button`
+  width: 20px;
+  height: 20px;
+  border: 0px;
   background-color: ${COLOR.LIGHT_GRAY_TRANSPARENT};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease 0s;
   &:hover {
     background-color: ${COLOR.LIGHT_GRAY_TRANSLUCENT};
+    border-radius: 20px;
+    cursor: pointer;
   }
 `;
+/*
+  relative を指定して edit-button-image セレクタを継承する要素を重ね合わせる方法で表示していたが、
+  flex アイテムにして要素を中心に配置した方が楽だったため flex を用いるように変更。
 
-const ButtonImage = styled.img``;
+  transition: 0.2s ease 0s -> hover時のアクション時間。 ease は変化速度を途中だけ速くする。 遅延時間は 0 秒。
+  border-radius: 20px; -> 半径 20px の円弧をベースにした角丸を実装
+  
+  参考文献: https://www.webcreatorbox.com/tech/border-radius
+  */
+
+const ButtonImage = styled.img`
+  width: 20px;
+  height: 20px;
+`;
 
 /* 
   -- 3時間ハマったため透明度を子要素に継承させないための注意点を記載 -- 
