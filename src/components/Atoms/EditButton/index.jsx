@@ -5,8 +5,8 @@ import COLOR from "../../../variables/color";
 
 export const EditButton = ({onClick}) => {
   return (
-    <Button onClick={onClick} className="edit-button">
-      <ButtonImage src={pencil} className="edit-button-image"/>
+    <Button onClick={onClick}>
+      <ButtonImage src={pencil}/>
     </Button>
   );
 }
