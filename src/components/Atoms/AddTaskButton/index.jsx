@@ -4,13 +4,12 @@ import plus from "../../../assets/svg/plus.svg"
 import TEXTS from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 import FONTFAMILY from "../../../variables/font_family";
-import "./style.css";
 
 export const AddTaskButton = ({onClick}) => {
   return (
     <Button onClick={onClick}>
       <ButtonImage src={plus}/>
-      <ButtonText className="add-task-button-text">タスクを追加</ButtonText>
+      <ButtonText>タスクを追加</ButtonText>
     </Button>
   );
 }
@@ -26,7 +25,7 @@ const Button = styled.button`
   cursor: pointer;
   &:hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};
-    border-radius: 14px;
+    border-radius: 12px;
   }
 `;
 /*
@@ -35,6 +34,7 @@ const Button = styled.button`
 */
 
 const ButtonImage = styled.img`
+  width: 20px;
   height: 20px;
 `;
 
