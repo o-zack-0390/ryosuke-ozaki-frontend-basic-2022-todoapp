@@ -1,15 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import check from "../../../assets/svg/check.svg"
+import check from "../../../assets/svg/check.svg";
 import COLOR from "../../../variables/color";
 
-export const Checkbox = ({onClick}) => {
+export const Checkbox = ({ onClick }) => {
   return (
     <Button onClick={onClick}>
       <ButtonImage src={check} alt="チェックボックスのチェックマーク" />
     </Button>
   );
-}
+};
+
+const ButtonImage = styled.img`
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+`;
 
 const Button = styled.button`
   background-color: ${COLOR.LIGHT_GRAY_TRANSPARENT};
@@ -26,12 +32,6 @@ const Button = styled.button`
   &:hover ${ButtonImage} {
     visibility: visible;
   }
-`;
-
-const ButtonImage = styled.img`
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
 `;
 
 /*
