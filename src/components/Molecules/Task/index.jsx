@@ -5,7 +5,6 @@ import COLOR from "../../../variables/color";
 import { Checkbox } from "../../Atoms/Checkbox/index"
 import { EditButton } from "../../Atoms/EditButton/index"
 import { Input } from "../../Atoms/input/index"
-import "./style.css";
 
 export const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultIsEditing=false }) => {
   
@@ -37,11 +36,25 @@ export const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultIsEdit
   );
 }
 
-const TaskContainer = styled.div``;
+const TaskContainer = styled.div`
+  padding: 2px 6px;
+  display: flex;
+  gap: 10px;
+`;
 
-const PrintContent = styled.div``;
+const PrintContent = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 10px;
+`;
 
 const PrintTaskName = styled.p`
   color: ${COLOR.LIGHT_GRAY};
   ${TEXTS.S};
+  margin: 0px;
+  flex: 1; 
 `;
+/* 
+  margin 0px: -> p タグには初期値で margin が設定されているので上書き
+  flex: 1     -> 編集ボタンとの余白を埋めて間隔を保持するように変更 
+*/
