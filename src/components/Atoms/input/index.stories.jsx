@@ -1,8 +1,7 @@
 import { Input } from "./index";
 
 export default {
-  component: Input,
-  title: "Components/Atoms/Input",
+  component: Input
 };
 
 // index.jsx Input コンポーネントの引数を設定
