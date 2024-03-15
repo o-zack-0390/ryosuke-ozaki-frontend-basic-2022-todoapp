@@ -16,6 +16,9 @@ import { Task } from "../../Molecules/Task/index";
 
 export const TodoCard = () => {
 
+  // タスク管理で使用
+  const [taskList, setTaskList] = useState([]);
+
   // タスク追加ボタンを押したら、新しいタスクを配列に追加
   const onAddTaskButtonClick = () => 
   {
@@ -67,8 +70,6 @@ export const TodoCard = () => {
       }
     */
   }
-
-  const [taskList, setTaskList] = useState([]);
 
   return (
     <TodoCardContainer>
