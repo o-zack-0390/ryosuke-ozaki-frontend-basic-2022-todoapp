@@ -25,7 +25,7 @@ export const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultIsEdit
     <TaskContainer>
       <Checkbox onClick={onTaskComplete} />
       {isEditing ? // 編集中なら Input 要素を表示し、編集中でないなら PrintContent を表示する
-      <Input onEditComplete={onEditComplete} defaultValue={taskName}></Input>
+      <Input onEditComplete={onEditComplete} defaultValue={taskName}/>
       :
       <PrintContent>
         <PrintTaskName>{taskName}</PrintTaskName>
