@@ -3,7 +3,6 @@ import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton";
 import { Task } from "../../Molecules/Task/index";
-import "./style.css";
 
 /* 
   AddTaskButton コンポーネントの引数に設定
@@ -72,12 +71,12 @@ export const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
 
   return (
-    <TodoCardContainer className="todocard-container">
+    <TodoCardContainer>
       <AddTaskButton 
         onClick={onAddTaskButtonClick}
       />
       {taskList.map((task, index) => ( // taskList の各要素に対して Task コンポーネントを適用
-        <TaskContainer key={index} className="todocard-task">
+        <TaskContainer key={index}>
           <Task
             onTaskNameChange = {(value) => onTaskNameChange(value, index)} // タスク編集時の処理を関数にして設定
             onTaskComplete = {() => onTaskComplete(index)}                 // タスク完了時の処理を関数にして設定
@@ -99,6 +98,9 @@ export const TodoCard = () => {
 
 const TodoCardContainer = styled.div`
   background-color: ${COLOR.LIGHT_BLACK};
+  padding: 20px;
 `;
 
-const TaskContainer = styled.div``;
+const TaskContainer = styled.div`
+  margin-top: 10px;
+`;

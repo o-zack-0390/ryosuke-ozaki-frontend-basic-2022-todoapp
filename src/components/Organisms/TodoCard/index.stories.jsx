@@ -2,7 +2,6 @@ import { TodoCard } from "./index";
 
 export default {
   component: TodoCard, // コンポーネントを指定
-  title: "Components/Organisms/TodoCard", // タイトルを命名。同じタイトルが複数存在すると Story Book 起動後エラーになる。
 };
 
 // index.jsx TodoCard コンポーネントの引数を設定
