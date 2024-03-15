@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import TEXTS from "../../../variables/texts";
 import COLOR from "../../../variables/color";
-import "./style.css";
 
 export const Input = ({ onEditComplete, defaultValue }) => {
   const inputRef = useRef(null);
@@ -30,9 +29,8 @@ export const Input = ({ onEditComplete, defaultValue }) => {
   */
 
   return (
-    <InputContainer className="input-container">
+    <InputContainer>
       <InputField
-        className="input-field"
         defaultValue={defaultValue}
         ref={inputRef}
         onBlur={handleBlur}
@@ -42,15 +40,29 @@ export const Input = ({ onEditComplete, defaultValue }) => {
   );
   /*
     defaultValue -> input要素が入力されてない場合、代わりに入力しておく値を指定する HTML 属性
-    onBlur       -> 要素がフォーカスを失ったときに実行される 関数 を指定する HTML 属性
-    onKeyDown    -> キー入力時に実行される 関数 を指定する HTML 属性
+    onBlur       -> 要素がフォーカスを失ったときに実行される関数を指定する HTML 属性
+    onKeyDown    -> キー入力時に実行される関数を指定する HTML 属性
   */
 };
 
-const InputContainer = styled.div``;
+const InputContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+/*
+  input-field セレクタのみにすると要素の右側が親要素のmainタグを突き抜けていたため、
+  親要素に flex コンテナを実装し中央寄せにする。
+*/
 
 const InputField = styled.input`
   color: ${COLOR.LIGHT_GRAY};
   background-color: ${COLOR.BLACK};
   ${TEXTS.S}
+  width: 100%;
+  height: 20px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 2px;
+  outline: none;
 `;

@@ -2,7 +2,6 @@ import { EditButton } from "./index";
 
 export default {
   component: EditButton, // コンポーネントを指定
-  title: "Components/Atoms/EditButton", // タイトルを命名
 };
 
 // index.jsx EditButton コンポーネントの引数を設定
