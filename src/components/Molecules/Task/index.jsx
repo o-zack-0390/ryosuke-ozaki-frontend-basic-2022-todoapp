@@ -8,7 +8,7 @@ import { Input } from "../../Atoms/input/index"
 
 export const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultIsEditing=false }) => {
   
-  const [isEditing, setIsEditing] = useState(defaultIsEditing);
+  const [isEditing, setIsEditing] = useState(!defaultIsEditing);
 
   // タスク名の編集が完了したら、編集中でないことを示す false に変更し、タスク名を更新
   const onEditComplete = (value) => {
