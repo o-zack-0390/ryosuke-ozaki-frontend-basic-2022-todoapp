@@ -96,7 +96,7 @@ export const TodoCard = () => {
             onTaskNameChange = {(value) => onTaskNameChange(value, index)} // タスク編集時の処理を関数にして設定
             onTaskComplete = {() => onTaskComplete(index)}                 // タスク完了時の処理を関数にして設定
             taskName = {task.name}                                         // タスク名を設定
-            defaultValue = {task.initializing}                             // 編集状態を設定
+            defaultIsEditing={task.initializing}                           // 編集状態を設定
           />
         </TaskContainer>
         /*
