@@ -16,7 +16,7 @@ export const Alert = ({ isActive, context }) => {
 const AlertContainer = styled.div`
     position: absolute;
     left: 50%;
-    top: ${({isActive}) => (isActive ? `80px` : `0px`)};
+    top: ${({alertActive}) => (alertActive ? `80px` : `0px`)};
     width: 100%;
     max-width: 360px;
     padding: 10px 20px;
