@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton";
@@ -18,6 +18,9 @@ export const TodoCard = () => {
 
   // タスク管理で使用
   const [taskList, setTaskList] = useState([]);
+
+  // Local Storage のストレージ名
+  const storageName = "TaskStorage";
 
   // タスク追加ボタンを押したら、新しいタスクを配列に追加
   const onAddTaskButtonClick = () => 
@@ -70,6 +73,17 @@ export const TodoCard = () => {
       }
     */
   }
+
+  // ロード時に登録されているタスクを取得する処理
+  useEffect(() => {
+    const res = localStorage.getItem(storageName);
+    if(res !== null){ setTaskList(JSON.parse(res)) } // string → Object
+  }, [])
+
+  // 更新タスクを登録する処理
+  useEffect(() => {
+    localStorage.setItem(storageName, JSON.stringify(taskList)); // Object → string
+  }, [taskList])
 
   return (
     <TodoCardContainer>
