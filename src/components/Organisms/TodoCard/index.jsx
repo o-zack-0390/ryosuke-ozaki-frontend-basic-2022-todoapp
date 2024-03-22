@@ -43,7 +43,7 @@ export const TodoCard = () => {
     // 何も入力されていない場合はアラートを表示してタスクを削除
     if(value === ""){
       onTaskComplete(editTargetIndex);
-      AlertHandlerContext.setAlert("あなたのタスクは名前がついていなかったので消しましたよ")
+      AlertHandlerContext.setAlert("タスクの名前が設定されていません。")
     }
 
     // 入力されている場合はタスク名を更新
