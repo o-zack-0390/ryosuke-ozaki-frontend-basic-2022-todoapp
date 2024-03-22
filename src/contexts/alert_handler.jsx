@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
 
+// Context を作成
 const AlertHandlerContext = createContext();
 
 export const AlertHandlerProvider = ({ children }) => {
-
 /*
     visible      : アラートが表示されているかどうかを示す boolean 変数
     errorText    : アラートに表示するエラー文を格納する変数
@@ -48,3 +48,13 @@ export const AlertHandlerProvider = ({ children }) => {
 };
 
 export const useAlertHandlerContext = () => useContext(AlertHandlerContext);
+/*
+    AlertHandlerContext の引数に設定された変数を他のコンポーネントからも使用できるようになる。
+    他コンポーネントからインポートすることで「.」を用いて参照可能。
+
+    const AlertHandlerContext = useAlertHandlerContext();
+    AlertHandlerContext.visible;
+    AlertHandlerContext.errorText;
+    AlertHandlerContext.setAlert(errorText);
+    AlertHandlerContext.closeAlert();
+*/
