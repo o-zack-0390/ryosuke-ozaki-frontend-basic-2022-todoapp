@@ -26,8 +26,6 @@ const AlertContainer = styled.div`
     visibility: ${({alertActive}) => (alertActive ? `visible` : `hidden`)};
 `;
 /*
-    figma の通りに width = 400px にすると padding 含めて 440px になるので width = 360px に設定。
-
     top        -> Alert関数の isActive 変数を参照し、三項演算子でサイズを設定
     transition -> トランジションを指定するプロパティ
     all        -> 全プロパティに対してトランジションを適用
