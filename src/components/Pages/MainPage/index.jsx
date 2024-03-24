@@ -28,6 +28,13 @@ const MainPageContainer = styled.div`
         padding: 20px;
     }
 `;
+/*
+    padding -> 子要素との余白
+    flex-direction: column -> X軸とY軸を反転させて縦方向に並べる
+    justify-content:       -> 上下を中央寄せ
+    align-items: center    -> 左右を中央寄せ
+    gap: 20px;             -> flex アイテム間の間隔
+*/
 
 const TodoCardContainer = styled.div`
     width: 500px;
