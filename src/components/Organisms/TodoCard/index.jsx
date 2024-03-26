@@ -85,6 +85,14 @@ export const TodoCard = () => {
     localStorage.setItem(storageName, JSON.stringify(taskList)); // Object → string
   }, [taskList])
 
+  /*
+    localStorage について
+    
+    保存期間に制限がないローカルのStorageオブジェクト。
+    key-value方式でデータを保存する。
+    オリジン(異なるポート番号)ごとにデータを保存する。
+  */
+
   return (
     <TodoCardContainer>
       <AddTaskButton 
