@@ -11,7 +11,7 @@ export const AlertManager = () => {
     useEffect(() => {
         if(AlertHandlerContext.visible === true){
             setTimeout(() => {
-                AlertHandlerContext.closeAlert();
+                AlertHandlerContext.closeAlert(AlertHandlerContext.errorText);
             }, 5000);
         }
     })

@@ -26,10 +26,10 @@ export const AlertHandlerProvider = ({ children }) => {
   };
   
   // 一定時間経過したらアラートを消去する
-  const closeAlert = () => {
+  const closeAlert = (errorText) => {
     setAlertState({
       visible: false,
-      errorText: "タスクの名前が設定されていません。",
+      errorText: errorText,
     });
   };
 
