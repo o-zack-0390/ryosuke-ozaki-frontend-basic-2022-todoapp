@@ -29,7 +29,7 @@ export const AlertHandlerProvider = ({ children }) => {
   const closeAlert = () => {
     setAlertState({
       visible: false,
-      errorText: "",
+      errorText: "タスクの名前が設定されていません。",
     });
   };
 
