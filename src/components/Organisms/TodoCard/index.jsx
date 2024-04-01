@@ -3,6 +3,7 @@ import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton";
 import { Task } from "../../Molecules/Task/index";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 /* 
   AddTaskButton コンポーネントの引数に設定
@@ -15,6 +16,9 @@ import { Task } from "../../Molecules/Task/index";
 */
 
 export const TodoCard = () => {
+
+  // アラート管理で使用
+  const AlertHandlerContext = useAlertHandlerContext();
 
   // タスク管理で使用
   const [taskList, setTaskList] = useState([]);
@@ -39,9 +43,10 @@ export const TodoCard = () => {
   // タスク編集完了ボタンが押されたらタスク名を変更し、編集状態を更新
   const onTaskNameChange = (value, editTargetIndex) => {
 
-    // 何も入力されていない場合はタスクを削除
+    // 何も入力されていない場合はアラートを表示してタスクを削除
     if(value === ""){
       onTaskComplete(editTargetIndex);
+      AlertHandlerContext.setAlert("タスクの名前が設定されていません。")
     }
 
     // 入力されている場合はタスク名を更新
